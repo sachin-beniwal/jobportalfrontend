@@ -138,7 +138,7 @@ export const getUser = () => async (dispatch) => {
             }
         );
        
-        dispatch(userSlice.actions.fetchUserSuccess(response.data.user));
+        dispatch(userSlice.actions.fetchUserSuccess());
         dispatch(userSlice.actions.clearAllError());
       
     } catch (error) {
