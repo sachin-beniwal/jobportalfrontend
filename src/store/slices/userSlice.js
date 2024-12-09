@@ -97,7 +97,7 @@ const userSlice = createSlice({
 export const register = (data) => async (dispatch) => {
     dispatch(userSlice.actions.registerRequest());
     try {
-        const response = await axios.post("http://localhost:4000/api/v1/user/register", data, {
+        const response = await axios.post(`https://job-portal-grsh.onrender.com/user/register`, data, {
             withCredentials: true,
             headers: { "Content-Type": "multipart/form-data" }
         })
@@ -116,7 +116,7 @@ export const register = (data) => async (dispatch) => {
 export const login = (data) => async (dispacth) => {
     dispacth(userSlice.actions.loginRequest());
     try {
-        const response = await axios.post("http://localhost:4000/api/v1/user/login", data, {
+        const response = await axios.post("https://job-portal-grsh.onrender.com/user/login", data, {
             withCredentials: true,
             headers: { "Content-Type": "application/json" }
         })
@@ -132,7 +132,7 @@ export const getUser = () => async (dispatch) => {
     dispatch(userSlice.actions.fetchUserRequest());
     try {
         const response = await axios.get(
-            "http://localhost:4000/api/v1/user/getuser",
+            "https://job-portal-grsh.onrender.com/user/getuser",
             {
                 withCredentials: true,
             }
@@ -147,7 +147,7 @@ export const getUser = () => async (dispatch) => {
 export const logout = () => async (dispatch) => {
     try {
         const response = await axios.get(
-            "http://localhost:4000/api/v1/user/logout",
+            "https://job-portal-grsh.onrender.com/user/logout",
             {
                 withCredentials: true,
             }
