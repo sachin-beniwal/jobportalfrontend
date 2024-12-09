@@ -38,7 +38,7 @@ export const updateProfile = (data) => async (dispatch) => {
   dispatch(updateProfileSlice.actions.updateRequest());
   try {
     const response = await axios.put(
-      "https://job-portal-grsh.onrender.com/user/update/profile",
+      "https://job-portal-grsh.onrender.com/api/v1/user/update/profile",
       data,
       {
         withCredentials: true,
@@ -56,7 +56,7 @@ export const updatePassword = (data) => async (dispatch) => {
   dispatch(updateProfileSlice.actions.updateRequest());
   try {
     const response = await axios.put(
-      "https://job-portal-grsh.onrender.com/user/update/password",
+      "https://job-portal-grsh.onrender.com/api/v1/user/update/password",
       data,
       {
         withCredentials: true,
