@@ -142,7 +142,7 @@ export const getUser = () => async (dispatch) => {
         dispatch(userSlice.actions.clearAllError());
       
     } catch (error) {
-        dispatch(userSlice.actions.fetchUserFailed(error?.response?.data?.message));
+        dispatch(userSlice.actions.fetchUserFailed("LogIn For Batter Experience"));
     }
 };
 export const logout = () => async (dispatch) => {
