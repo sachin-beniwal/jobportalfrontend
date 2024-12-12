@@ -61,6 +61,7 @@ const PostApplication = () => {
     if (message) {
       toast.success(message);
       dispatch(resetApplicationSlice());
+      navigateTo("/")
     }
     dispatch(fetchSingleJob(jobId));
   }, [dispatch, error, message, jobId, user]);
