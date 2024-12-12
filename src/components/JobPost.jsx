@@ -48,27 +48,26 @@ const JobPost = () => {
   ];
 
   const cities = [
-    "Karachi",
-    "Lahore",
-    "Islamabad",
-    "Rawalpindi",
-    "Faisalabad",
-    "Multan",
+    "Haryana",
+    "Andhra Pradesh",
+    "Assam",
+    "Gujarat",
+    "Himachal Pradesh",
+    "Jharkhand",
     "Hyderabad",
-    "Quetta",
-    "Peshawar",
-    "Sialkot",
-    "Gujranwala",
-    "Sargodha",
-    "Bahawalpur",
-    "Sukkur",
-    "Mardan",
-    "Mingora",
-    "Sheikhupura",
-    "Mandi Bahauddin",
-    "Larkana",
-    "Nawabshah",
-  ];
+    "Karnataka",
+    "Kerala",
+    "Maharashtra",
+    "Odisha",
+    "Punjab",
+    "Rajasthan",
+    "Sikkim",
+    "Telangana",
+    "Tripura",
+    "Manipur",
+    "Madhya Pradesh",
+    "Arunachal Pradesh",
+    "Chhattisgarh",];
 
   const { isAuthenticated, user } = useSelector((state) => state.user);
   const { loading, error, message } = useSelector((state) => state.jobs);
