@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const userSlice = createSlice({
   name: "user",
@@ -101,6 +102,7 @@ export const register = (data) => async (dispatch) => {
     );
     dispatch(userSlice.actions.registerSuccess(response.data));
     dispatch(userSlice.actions.clearAllErrors());
+    toast(response.data.message)
   } catch (error) {
     dispatch(userSlice.actions.registerFailed(error.response.data.message));
   }
@@ -119,6 +121,7 @@ export const login = (data) => async (dispatch) => {
     );
     dispatch(userSlice.actions.loginSuccess(response.data));
     dispatch(userSlice.actions.clearAllErrors());
+        toast(response.data.message)
   } catch (error) {
     dispatch(userSlice.actions.loginFailed(error.response.data.message));
   }
