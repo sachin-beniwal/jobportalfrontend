@@ -94,7 +94,8 @@ const JobPost = () => {
 
     dispatch(postJob(formData));
   };
-
+const navigate = useNavigate();
+ 
   useEffect(() => {
     if (error) {
       toast.error(error);
@@ -103,6 +104,7 @@ const JobPost = () => {
     if (message) {
       toast.success(message);
       dispatch(resetJobSlice());
+       navigate("/");
     }
   }, [dispatch, error, loading, message]);
 
